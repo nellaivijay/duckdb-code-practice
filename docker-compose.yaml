@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  # Jupyter Notebook with DuckDB
+  jupyter:
+    image: jupyter/scipy-notebook:latest
+    container_name: duckdb-jupyter
+    ports:
+      - "${JUPYTER_PORT:-8888}:8888"
+    environment:
+      JUPYTER_ENABLE_LAB: "yes"
+      JUPYTER_TOKEN: "${JUPYTER_TOKEN:-duckdb_practice}"
+    volumes:
+      - ./:/home/jovyan/work
+      - ./data:/home/jovyan/data
+      - ./notebooks:/home/jovyan/notebooks
+    working_dir: /home/jovyan/work
+    command: >
+      bash -c "
+        pip install duckdb pandas pyarrow && 
+        jupyter lab --ip=0.0.0.0 --port=8888 --no-browser --allow-root --NotebookApp.token=${JUPYTER_TOKEN:-duckdb_practice}
+      "
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8888"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # DuckDB CLI container (optional)
+  duckdb-cli:
+    image: duckdb/duckdb:latest
+    container_name: duckdb-cli
+    volumes:
+      - ./data:/data
+      - ./scripts:/scripts
+    working_dir: /data
+    command: tail -f /dev/null
+    stdin_open: true
+    tty: true
+
+volumes:
+  jupyter_data:
+
+networks:
+  default:
+    name: duckdb-practice-network
