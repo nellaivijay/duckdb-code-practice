@@ -1,0 +1,12 @@
+# Allow all web robots
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://nellaivijay.github.io/duckdb-code-practice/sitemap.xml
+
+# Disallow sensitive areas (if any)
+User-agent: *
+Disallow: /private/
+Disallow: /admin/
+Disallow: /temp/
