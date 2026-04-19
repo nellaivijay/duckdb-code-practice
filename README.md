@@ -12,7 +12,7 @@ Author: DuckDB Code Practice Community
 
 A comprehensive, vendor-independent DuckDB learning environment designed for developers, data engineers, and analysts who want to master modern in-memory SQL analytics and lakehouse architecture through hands-on practice.
 
-**10 progressive labs with 80+ exercises covering DuckDB fundamentals, lakehouse patterns, ETL workflows, and production readiness. Completely free and open source. Built for learners, by learners.**
+**15 comprehensive labs with 120+ exercises covering DuckDB fundamentals through production deployment. Aligned with comprehensive DuckDB learning curriculum. Completely free and open source. Built for learners, by learners.**
 
 ## 🎓 Why This Repository?
 
@@ -31,9 +31,9 @@ This educational resource fills the gap between theoretical knowledge and practi
 
 Our labs are designed to build knowledge progressively:
 
-- **Beginner (Labs 0-2)**: Foundation and basic operations
-- **Intermediate (Labs 3-6)**: Advanced features and optimization
-- **Advanced (Labs 7-9)**: Production patterns and integration
+- **Beginner (Labs 0-2)**: Foundation, introduction, and basic operations
+- **Intermediate (Labs 3-6)**: Advanced features, data exploration, and optimization
+- **Advanced (Labs 7-10)**: Cloud integration, pipelines, applications, and client APIs
 
 ### Hands-On Learning
 
@@ -131,9 +131,9 @@ Gain experience with different interfaces:
 
 | Level | Labs | Time per Lab | What It Tests |
 |-------|------|--------------|---------------|
-| Beginner | Labs 0-2 | 30-45 min | Basic setup, SQL operations, fundamental concepts |
-| Intermediate | Labs 3-6 | 45-60 min | Advanced features, optimization patterns, real-world scenarios |
-| Advanced | Labs 7-9 | 60-90 min | Performance analysis, extensions, integration patterns |
+| Beginner | Labs 0-2 | 30-60 min | Basic setup, introduction, SQL operations, fundamental concepts |
+| Intermediate | Labs 3-6 | 45-75 min | Advanced features, data exploration, optimization patterns |
+| Advanced | Labs 7-10 | 60-120 min | Cloud integration, pipelines, applications, client APIs |
 
 ### Lab 0: Sample Database Setup
 - Generate and load realistic business data
@@ -147,53 +147,93 @@ Gain experience with different interfaces:
 - Validate Python API setup
 - Explore different interfaces
 
-### Lab 2: Basic DuckDB Operations
-- Create databases and tables
-- Insert and query data
-- Understand SQL basics in DuckDB
-- Work with different data types
+### Lab 1A: Introduction to DuckDB (Chapter 1)
+- Understand what DuckDB is and its characteristics
+- Learn when to use DuckDB vs. other databases
+- Explore DuckDB's place in the data ecosystem
+- Understand the complete data processing flow
+- Practice DuckDB-specific SQL extensions
 
-### Lab 3: Advanced Features and Capabilities
+### Lab 2: Basic DuckDB Operations (Chapter 3)
+- Create databases and tables using DDL
+- Insert, update, and delete data using DML
+- Execute SQL queries and understand results
+- Work with different data types and functions
+- Practice DuckDB-specific SQL extensions
+
+### Lab 3: Advanced Features (Chapter 4)
 - Window functions and analytical queries
-- Complex join strategies and performance
-- Subqueries, CTEs, and advanced SQL patterns
-- Lakehouse architecture patterns
-- Data type conversions and casting
+- Advanced aggregation and grouping sets
+- Complex subqueries and CTEs
+- PIVOT operations and ASOF joins
+- LATERAL joins and table functions
+- FILTER, QUALIFY, and HAVING clauses
 
-### Lab 4: DuckDB + Python Integration
+### Lab 4: DuckDB + Python Integration (Chapter 6)
 - Deep dive into Python API for programmatic access
 - Seamless pandas and NumPy integration
-- Transaction management and error handling
+- User-defined functions (UDFs) in Python
+- Apache Arrow and Polars interoperability
 - Building data processing pipelines
-- Lakehouse ETL patterns with Python
 
 ### Lab 5: Data Format Operations
 - Parquet file operations for lakehouse storage
 - Apache Arrow integration for zero-copy operations
 - CSV/JSON processing and conversion
 - Data format optimization strategies
-- Lakehouse format best practices
 
-### Lab 6: Performance & Optimization
-- Query execution plan analysis
-- Index strategies for lakehouse performance
+### Lab 5A: Exploring Data Without Persistence (Chapter 5)
+- Query data files directly without creating tables
+- Automatic file type and schema inference
+- Shred nested JSON structures
+- Convert between data formats (CSV to Parquet)
+- Query Parquet files directly
+- Access SQLite and other databases
+- Work with Excel files
+
+### Lab 6: Performance & Optimization (Chapter 10)
+- Query execution plan analysis with EXPLAIN
+- Index strategies and performance tuning
 - Memory and thread configuration optimization
-- Caching strategies for analytical workloads
-- Lakehouse layer performance tuning
+- Loading and querying large datasets (Stack Overflow, NYC Taxi)
+- Export data to Parquet for performance
+- S3 integration and cloud data access
 
 ### Lab 7: Extensions & Advanced Features
 - HTTP filesystem for remote data lake access
 - Spatial data processing and analysis
 - Advanced JSON operations for semi-structured data
 - Custom functions and UDFs for business logic
-- Lakehouse extension patterns
+
+### Lab 7: DuckDB in the Cloud with MotherDuck (Chapter 7)
+- Introduction to MotherDuck and its architecture
+- Set up and configure MotherDuck account
+- Connect to MotherDuck using CLI and token authentication
+- Upload and manage databases in the cloud
+- Share databases with collaborators
+- Configure S3 secrets and load data from S3
+- Optimize data ingestion and usage
+- Query data with AI assistance
+- Explore MotherDuck integrations
 
 ### Lab 8: Real-World Use Cases and Patterns
 - ETL pipeline implementation with error handling
 - Data quality frameworks and validation
 - Slowly Changing Dimensions (SCD) implementation
 - Batch processing workflows
-- Lakehouse production patterns
+
+### Lab 8A: Building Data Pipelines (Chapter 8)
+- Data ingestion with dlt (Data Loading Tool)
+- Set up and configure dlt pipelines
+- Explore pipeline metadata and monitoring
+- Data transformation with dbt (data build tool)
+- Set up dbt projects with DuckDB
+- Define sources, models, and transformations
+- Test transformations and pipelines
+- Orchestrate data pipelines with Dagster
+- Define assets and dependencies
+- Run and monitor Dagster pipelines
+- Upload processed data to MotherDuck
 
 ### Lab 9: Integration and Production Readiness
 - External database and system integration
@@ -201,6 +241,26 @@ Gain experience with different interfaces:
 - Monitoring, alerting, and health checks
 - Backup, recovery, and disaster procedures
 - Security implementation and access control
+
+### Lab 9: Building and Deploying Data Apps (Chapter 9)
+- Build custom data apps with Streamlit
+- Use Streamlit components for enhanced functionality
+- Visualize data using plotly
+- Deploy Streamlit apps on Community Cloud
+- Build BI dashboards with Apache Superset
+- Create datasets from SQL queries
+- Export and import Superset dashboards
+- Integrate DuckDB with both tools
+
+### Lab 10: Client APIs for DuckDB (Appendix)
+- Overview of officially supported languages
+- Concurrency considerations and best practices
+- Importing large amounts of data efficiently
+- Using DuckDB from Java via JDBC Driver
+- Multi-threaded access patterns
+- Data processing from Java
+- Additional connection options and configuration
+- Cross-language API comparison
 
 ## 💾 Sample Database
 
@@ -310,14 +370,20 @@ Deep-dive tutorials explaining the "Why" behind the "How":
 ### Lab Materials
 - [Lab 0: Sample Database Setup](labs/lab-00-sample-database.md) - Generate and load sample data
 - [Lab 1: Environment Setup](labs/lab-01-setup.md) - Component verification and first DuckDB query
-- [Lab 2: Basic Operations](labs/lab-02-basic-operations.md) - Tables, queries, data types
-- [Lab 3: Advanced Features and Capabilities](labs/lab-03-advanced-features.md) - Window functions, lakehouse patterns
-- [Lab 4: DuckDB + Python Integration](labs/lab-04-python-integration.md) - Python API, pandas, ETL pipelines
-- [Lab 5: Data Format Operations](labs/lab-05-data-format-operations.md) - Parquet, Arrow, lakehouse formats
-- [Lab 6: Performance & Optimization](labs/lab-06-performance-optimization.md) - Query optimization, lakehouse performance
-- [Lab 7: Extensions & Advanced Features](labs/lab-07-extensions-advanced-features.md) - HTTP filesystem, spatial, extensions
+- [Lab 1A: Introduction to DuckDB](labs/lab-01a-introduction.md) - DuckDB fundamentals and ecosystem
+- [Lab 2: Basic DuckDB Operations](labs/lab-02-basic-operations.md) - Tables, queries, data types (Chapter 3)
+- [Lab 3: Advanced Features](labs/lab-03-advanced-features.md) - Window functions, advanced SQL (Chapter 4)
+- [Lab 4: DuckDB + Python Integration](labs/lab-04-python-integration.md) - Python API, pandas, UDFs (Chapter 6)
+- [Lab 5: Data Format Operations](labs/lab-05-data-format-operations.md) - Parquet, Arrow, formats
+- [Lab 5A: Exploring Data Without Persistence](labs/lab-05a-exploring-data.md) - Direct file queries, JSON shredding (Chapter 5)
+- [Lab 6: Performance & Optimization](labs/lab-06-performance-optimization.md) - Query optimization, large datasets (Chapter 10)
+- [Lab 7: Extensions & Advanced Features](labs/lab-07-extensions-advanced-features.md) - HTTP filesystem, spatial
+- [Lab 7: DuckDB in the Cloud with MotherDuck](labs/lab-07-motherduck.md) - Cloud integration, S3, AI (Chapter 7)
 - [Lab 8: Real-World Use Cases and Patterns](labs/lab-08-real-world-patterns.md) - ETL, SCD, production patterns
-- [Lab 9: Integration and Production Readiness](labs/lab-09-integration-production.md) - Production deployment, monitoring, security
+- [Lab 8A: Building Data Pipelines](labs/lab-08a-data-pipelines.md) - dlt, dbt, Dagster (Chapter 8)
+- [Lab 9: Integration and Production Readiness](labs/lab-09-integration-production.md) - Production deployment, monitoring
+- [Lab 9: Building and Deploying Data Apps](labs/lab-09-data-apps.md) - Streamlit, Superset (Chapter 9)
+- [Lab 10: Client APIs for DuckDB](labs/lab-10-client-apis.md) - Multi-language APIs, JDBC (Appendix)
 
 ### 💡 Jupyter Notebooks
 Interactive Jupyter notebooks for hands-on learning:

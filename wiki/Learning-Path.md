@@ -4,7 +4,7 @@ This guide provides a structured learning path to master DuckDB through the Duck
 
 ## 🎯 Overview
 
-The learning path consists of 10 progressive labs that build from basic concepts to advanced production patterns. Each lab includes:
+The learning path consists of 15 comprehensive labs that cover DuckDB from fundamentals through production deployment, aligned with comprehensive DuckDB learning curriculum. Each lab includes:
 
 - Clear learning objectives
 - Step-by-step instructions
@@ -15,18 +15,18 @@ The learning path consists of 10 progressive labs that build from basic concepts
 ## 📊 Lab Structure
 
 ### Beginner Level (Labs 0-2)
-**Focus**: Foundation and basic operations
-**Time**: 30-45 minutes per lab
+**Focus**: Foundation, introduction, and basic operations
+**Time**: 30-60 minutes per lab
 **Prerequisites**: Basic Python knowledge
 
 ### Intermediate Level (Labs 3-6)
-**Focus**: Advanced features and optimization
-**Time**: 45-60 minutes per lab
+**Focus**: Advanced features, data exploration, and optimization
+**Time**: 45-75 minutes per lab
 **Prerequisites**: Complete beginner labs
 
-### Advanced Level (Labs 7-9)
-**Focus**: Production patterns and integration
-**Time**: 60-90 minutes per lab
+### Advanced Level (Labs 7-10)
+**Focus**: Cloud integration, pipelines, applications, and client APIs
+**Time**: 60-120 minutes per lab
 **Prerequisites**: Complete intermediate labs
 
 ## 🎓 Detailed Learning Path
@@ -81,12 +81,13 @@ The learning path consists of 10 progressive labs that build from basic concepts
 
 ---
 
-#### Lab 2: Basic Operations
+#### Lab 2: Basic Operations (Chapter 3)
 **🎯 Learning Objectives**
-- Create and manage databases
-- Perform CRUD operations
-- Understand data types
-- Practice SQL queries
+- Create and manage databases using DDL
+- Perform CRUD operations using DML
+- Understand data types and functions
+- Practice DuckDB-specific SQL extensions
+- Execute SQL queries and understand results
 
 **⏱️ Time**: 45-60 minutes
 **📋 Prerequisites**: Lab 1 completed
@@ -95,7 +96,7 @@ The learning path consists of 10 progressive labs that build from basic concepts
 **Key Concepts**:
 - Table creation and modification
 - Data insertion and querying
-- Data types and constraints
+- DuckDB SQL extensions
 - Basic SQL operations
 
 **Success Criteria**:
@@ -105,24 +106,53 @@ The learning path consists of 10 progressive labs that build from basic concepts
 
 ---
 
-### Phase 2: Intermediate Skills
-
-#### Lab 3: Advanced Features
+#### Lab 1A: Introduction to DuckDB (Chapter 1)
 **🎯 Learning Objectives**
-- Window functions
-- Complex joins
-- Subqueries and CTEs
-- Data type conversions
+- Understand what DuckDB is and its characteristics
+- Learn when to use DuckDB vs. other databases
+- Explore DuckDB's place in the data ecosystem
+- Understand the complete data processing flow
+- Practice DuckDB-specific SQL extensions
 
 **⏱️ Time**: 45-60 minutes
+**📋 Prerequisites**: Lab 0 completed
+**🚀 Start**: [Lab 1A Guide](../labs/lab-01a-introduction.md)
+
+**Key Concepts**:
+- DuckDB fundamentals and architecture
+- Data processing flow
+- Use case analysis
+- SQL extensions
+- Performance characteristics
+
+**Success Criteria**:
+- ✅ Understand DuckDB's role in analytics
+- ✅ Know when to use DuckDB
+- ✅ Understand data processing pipeline
+- ✅ Can use DuckDB-specific SQL features
+
+---
+
+### Phase 2: Intermediate Skills
+
+#### Lab 3: Advanced Features (Chapter 4)
+**🎯 Learning Objectives**
+- Window functions and analytical queries
+- Advanced aggregation and grouping sets
+- Complex subqueries and CTEs
+- PIVOT operations and ASOF joins
+- LATERAL joins and table functions
+- FILTER, QUALIFY, and HAVING clauses
+
+**⏱️ Time**: 60-75 minutes
 **📋 Prerequisites**: Lab 2 completed
 **🚀 Start**: [Lab 3 Guide](../labs/lab-03-advanced-features.md)
 
 **Key Concepts**:
 - Analytical functions
+- Advanced SQL patterns
 - Join strategies
 - Query optimization
-- Advanced SQL patterns
 
 **Success Criteria**:
 - ✅ Can write complex queries
@@ -131,14 +161,15 @@ The learning path consists of 10 progressive labs that build from basic concepts
 
 ---
 
-#### Lab 4: Python Integration
+#### Lab 4: Python Integration (Chapter 6)
 **🎯 Learning Objectives**
 - Python API deep dive
-- Pandas integration
-- Data frame operations
-- Transaction handling
+- Pandas and NumPy integration
+- User-defined functions (UDFs)
+- Apache Arrow and Polars interoperability
+- Data processing pipelines
 
-**⏱️ Time**: 45-60 minutes
+**⏱️ Time**: 60-75 minutes
 **📋 Prerequisites**: Lab 3 completed
 **🚀 Start**: [Lab 4 Guide](../labs/lab-04-python-integration.md)
 
@@ -179,15 +210,46 @@ The learning path consists of 10 progressive labs that build from basic concepts
 
 ---
 
-#### Lab 6: Performance & Optimization
+#### Lab 5A: Exploring Data Without Persistence (Chapter 5)
 **🎯 Learning Objectives**
-- Query optimization
-- Index usage
-- Memory management
-- Performance analysis
+- Query data files directly without creating tables
+- Automatic file type and schema inference
+- Shred nested JSON structures
+- Convert between data formats
+- Query Parquet files directly
+- Access SQLite and other databases
+- Work with Excel files
 
-**⏱️ Time**: 45-60 minutes
-**📋 Prerequisites**: Lab 5 completed
+**⏱️ Time**: 60-75 minutes
+**📋 Prerequisites**: Lab 4 completed
+**🚀 Start**: [Lab 5A Guide](../labs/lab-05a-exploring-data.md)
+
+**Key Concepts**:
+- Direct file queries
+- Schema inference
+- JSON shredding
+- Format conversion
+- Cross-database queries
+
+**Success Criteria**:
+- ✅ Can query files directly
+- ✅ Understand schema inference
+- ✅ Can work with nested data
+- ✅ Can convert between formats
+
+---
+
+#### Lab 6: Performance & Optimization (Chapter 10)
+**🎯 Learning Objectives**
+- Query execution plan analysis with EXPLAIN
+- Index strategies and performance tuning
+- Memory and thread configuration optimization
+- Loading and querying large datasets
+- Export data to Parquet for performance
+- S3 integration and cloud data access
+
+**⏱️ Time**: 60-75 minutes
+**📋 Prerequisites**: Lab 5A completed
 **🚀 Start**: [Lab 6 Guide](../labs/lab-06-performance-optimization.md)
 
 **Key Concepts**:
@@ -195,6 +257,7 @@ The learning path consists of 10 progressive labs that build from basic concepts
 - Index strategies
 - Memory configuration
 - Performance tuning
+- Large dataset handling
 
 **Success Criteria**:
 - ✅ Can optimize queries
@@ -229,6 +292,37 @@ The learning path consists of 10 progressive labs that build from basic concepts
 
 ---
 
+#### Lab 7: DuckDB in the Cloud with MotherDuck (Chapter 7)
+**🎯 Learning Objectives**
+- Introduction to MotherDuck and its architecture
+- Set up and configure MotherDuck account
+- Connect to MotherDuck using CLI and token authentication
+- Upload and manage databases in the cloud
+- Share databases with collaborators
+- Configure S3 secrets and load data from S3
+- Optimize data ingestion and usage
+- Query data with AI assistance
+- Explore MotherDuck integrations
+
+**⏱️ Time**: 75-90 minutes
+**📋 Prerequisites**: Lab 6 completed
+**🚀 Start**: [Lab 7 Guide](../labs/lab-07-motherduck.md)
+
+**Key Concepts**:
+- Cloud database management
+- Token-based authentication
+- S3 integration
+- Data sharing
+- AI-assisted querying
+
+**Success Criteria**:
+- ✅ Can use MotherDuck
+- ✅ Understand cloud data management
+- ✅ Can integrate with S3
+- ✅ Can share databases
+
+---
+
 #### Lab 8: Real-World Data Patterns
 **🎯 Learning Objectives**
 - ETL patterns
@@ -253,6 +347,39 @@ The learning path consists of 10 progressive labs that build from basic concepts
 
 ---
 
+#### Lab 8A: Building Data Pipelines (Chapter 8)
+**🎯 Learning Objectives**
+- Data ingestion with dlt (Data Loading Tool)
+- Set up and configure dlt pipelines
+- Explore pipeline metadata and monitoring
+- Data transformation with dbt (data build tool)
+- Set up dbt projects with DuckDB
+- Define sources, models, and transformations
+- Test transformations and pipelines
+- Orchestrate data pipelines with Dagster
+- Define assets and dependencies
+- Run and monitor Dagster pipelines
+- Upload processed data to MotherDuck
+
+**⏱️ Time**: 90-120 minutes
+**📋 Prerequisites**: Lab 7 completed
+**🚀 Start**: [Lab 8A Guide](../labs/lab-08a-data-pipelines.md)
+
+**Key Concepts**:
+- Modern data stack (dlt, dbt, Dagster)
+- Pipeline orchestration
+- Data transformation
+- Cloud integration
+- Pipeline monitoring
+
+**Success Criteria**:
+- ✅ Can build data pipelines
+- ✅ Understand modern data stack
+- ✅ Can orchestrate workflows
+- ✅ Can integrate with cloud
+
+---
+
 #### Lab 9: Integration & Production
 **🎯 Learning Objectives**
 - External database integration
@@ -261,7 +388,7 @@ The learning path consists of 10 progressive labs that build from basic concepts
 - Error handling
 
 **⏱️ Time**: 60-90 minutes
-**📋 Prerequisites**: Lab 8 completed
+**📋 Prerequisites**: Lab 8A completed
 **🚀 Start**: [Lab 9 Guide](../labs/lab-09-integration-production.md)
 
 **Key Concepts**:
@@ -274,6 +401,66 @@ The learning path consists of 10 progressive labs that build from basic concepts
 - ✅ Can integrate with other systems
 - ✅ Understand deployment options
 - ✅ Can monitor DuckDB operations
+
+---
+
+#### Lab 9: Building and Deploying Data Apps (Chapter 9)
+**🎯 Learning Objectives**
+- Build custom data apps with Streamlit
+- Use Streamlit components for enhanced functionality
+- Visualize data using plotly
+- Deploy Streamlit apps on Community Cloud
+- Build BI dashboards with Apache Superset
+- Create datasets from SQL queries
+- Export and import Superset dashboards
+- Integrate DuckDB with both tools
+
+**⏱️ Time**: 90-120 minutes
+**📋 Prerequisites**: Lab 8A completed
+**🚀 Start**: [Lab 9 Guide](../labs/lab-09-data-apps.md)
+
+**Key Concepts**:
+- Streamlit app development
+- Data visualization
+- Dashboard creation
+- Cloud deployment
+- BI tool integration
+
+**Success Criteria**:
+- ✅ Can build data apps
+- ✅ Can create dashboards
+- ✅ Can deploy applications
+- ✅ Can integrate with BI tools
+
+---
+
+#### Lab 10: Client APIs for DuckDB (Appendix)
+**🎯 Learning Objectives**
+- Overview of officially supported languages
+- Concurrency considerations and best practices
+- Importing large amounts of data efficiently
+- Using DuckDB from Java via JDBC Driver
+- Multi-threaded access patterns
+- Data processing from Java
+- Additional connection options and configuration
+- Cross-language API comparison
+
+**⏱️ Time**: 75-90 minutes
+**📋 Prerequisites**: Lab 9 completed
+**🚀 Start**: [Lab 10 Guide](../labs/lab-10-client-apis.md)
+
+**Key Concepts**:
+- Multi-language support
+- JDBC integration
+- Concurrency patterns
+- Performance optimization
+- Cross-language comparison
+
+**Success Criteria**:
+- ✅ Understand different client APIs
+- ✅ Can use JDBC driver
+- ✅ Understand concurrency
+- ✅ Can optimize performance
 
 ---
 
@@ -297,7 +484,11 @@ Track your progress through these skill areas:
 
 #### Advanced Skills
 - [ ] Extension usage
-- [ ] Production patterns
+- [ ] Cloud integration (MotherDuck)
+- [ ] Modern data stack (dlt, dbt, Dagster)
+- [ ] Data app development (Streamlit, Superset)
+- [ ] Multi-language APIs (JDBC, Python, R)
+- [ ] Production deployment
 - [ ] System integration
 - [ ] Monitoring and deployment
 
@@ -316,17 +507,23 @@ As you progress, build these projects:
 - Data conversion tool
 
 #### After Advanced Labs
-- Production ETL system
+- Production ETL system with dlt, dbt, and Dagster
+- Cloud-based analytics platform with MotherDuck
+- Interactive data applications with Streamlit
+- Enterprise BI dashboards with Superset
+- Multi-language data processing system
 - Real-time analytics platform
-- Multi-database integration
 
 ## 🎯 Certification Readiness
 
 Completing all labs prepares you for:
 
 - **Data Analyst Roles**: SQL and analytics skills
-- **Data Engineering Roles**: ETL and pipeline skills
-- **Data Science Roles**: Python and data processing skills
+- **Data Engineering Roles**: ETL, pipelines, and cloud skills
+- **Data Science Roles**: Python, data processing, and ML preparation
+- **BI Developer Roles**: Dashboard and visualization skills
+- **Full Stack Data Roles**: End-to-end data application development
+- **Cloud Data Roles**: Cloud database and integration skills
 
 ## 🆘 Support
 
