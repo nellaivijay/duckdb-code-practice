@@ -464,4 +464,4 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed contribution guidelines.
 
 ## 📄 License
 
-MIT License
+Apache License 2.0
