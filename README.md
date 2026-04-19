@@ -1,8 +1,8 @@
 <!--
 SEO Metadata
-Title: DuckDB Code Practice - Free Hands-on Labs for Modern Analytics Learning
-Description: Master DuckDB with free, vendor-independent hands-on labs. Practice SQL analytics, extensions, parquet, and modern data patterns with real-world exercises.
-Keywords: duckdb, sql analytics, data analytics, parquet, arrow, python, pandas, data engineering, olap, columnar database, open source data
+Title: DuckDB Code Practice - Free Hands-on Labs for Lakehouse Analytics
+Description: Master DuckDB and lakehouse architecture with free, vendor-independent hands-on labs. Practice SQL analytics, ETL patterns, data engineering, and modern data lakehouse concepts with real-world exercises.
+Keywords: duckdb, lakehouse, data lakehouse, sql analytics, data analytics, parquet, arrow, python, pandas, data engineering, olap, columnar database, open source data, ETL, data quality, production readiness
 Author: DuckDB Code Practice Community
 -->
 
@@ -10,17 +10,18 @@ Author: DuckDB Code Practice Community
 
 ## 🎯 Educational Mission
 
-A comprehensive, vendor-independent DuckDB learning environment designed for developers, data engineers, and analysts who want to master modern in-memory SQL analytics through hands-on practice.
+A comprehensive, vendor-independent DuckDB learning environment designed for developers, data engineers, and analysts who want to master modern in-memory SQL analytics and lakehouse architecture through hands-on practice.
 
-**10 progressive labs with 80+ exercises. Completely free and open source. Built for learners, by learners.**
+**10 progressive labs with 80+ exercises covering DuckDB fundamentals, lakehouse patterns, ETL workflows, and production readiness. Completely free and open source. Built for learners, by learners.**
 
 ## 🎓 Why This Repository?
 
-This educational resource fills the gap between theoretical knowledge and practical skills in DuckDB and modern analytics technologies:
+This educational resource fills the gap between theoretical knowledge and practical skills in DuckDB, lakehouse architecture, and modern analytics technologies:
 
 - **Learn by Doing**: Progressive hands-on labs build real skills
 - **Vendor Independent**: Master concepts that apply across all platforms
-- **Production Patterns**: Learn best practices used in real analytics workflows
+- **Lakehouse Focus**: Learn modern data lakehouse architecture patterns
+- **Production Patterns**: Learn ETL, data quality, and production operations
 - **Multi-Language Experience**: Work with Python, SQL, and command-line interfaces
 - **Community Driven**: Built and improved by the analytics community
 
@@ -56,8 +57,16 @@ Gain experience with different interfaces:
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │                   DuckDB Code Practice                     │
+│                   Lakehouse Learning Environment            │
 ├─────────────────────────────────────────────────────────────┤
 │                                                              │
+│  ┌──────────────────────────────────────────────────────┐  │
+│  │         Lakehouse Architecture Layers               │  │
+│  │         - Bronze: Raw data ingestion               │  │
+│  │         - Silver: Cleaned & validated              │  │
+│  │         - Gold: Business-ready aggregates          │  │
+│  └──────────────────────────────────────────────────────┘  │
+│                              ↓                              │
 │  ┌──────────────────────────────────────────────────────┐  │
 │  │         DuckDB Core Engine                           │  │
 │  │         - In-memory OLAP database                   │  │
@@ -75,18 +84,18 @@ Gain experience with different interfaces:
 │                              ↓                              │
 │  ┌──────────────────────────────────────────────────────┐  │
 │  │         Data Formats & Extensions                    │  │
-│  │         - Parquet files                             │  │
-│  │         - Apache Arrow                              │  │
-│  │         - CSV/JSON                                  │  │
+│  │         - Parquet files (lakehouse standard)        │  │
+│  │         - Apache Arrow (zero-copy)                 │  │
+│  │         - CSV/JSON (interchange)                   │  │
 │  │         - Extension ecosystem                       │  │
 │  └──────────────────────────────────────────────────────┘  │
 │                              ↓                              │
 │  ┌──────────────────────────────────────────────────────┐  │
-│  │         Integration Layer                            │  │
-│  │         - Pandas integration                        │  │
-│  │         - Polars integration                        │  │
-│  │         - Data frame conversion                      │  │
-│  │         - External database connectors              │  │
+│  │         Production Operations                       │  │
+│  │         - ETL pipelines                             │  │
+│  │         - Data quality frameworks                   │  │
+│  │         - Monitoring & alerting                     │  │
+│  │         - Backup & recovery                        │  │
 │  └──────────────────────────────────────────────────────┘  │
 │                                                              │
 └─────────────────────────────────────────────────────────────┘
@@ -144,47 +153,54 @@ Gain experience with different interfaces:
 - Understand SQL basics in DuckDB
 - Work with different data types
 
-### Lab 3: Advanced DuckDB Features
-- Window functions and analytics
-- Complex joins and aggregations
-- Subqueries and CTEs
-- Data type conversions
+### Lab 3: Advanced Features and Capabilities
+- Window functions and analytical queries
+- Complex join strategies and performance
+- Subqueries, CTEs, and advanced SQL patterns
+- Lakehouse architecture patterns
+- Data type conversions and casting
 
 ### Lab 4: DuckDB + Python Integration
-- Python API usage
-- Pandas integration
-- Data frame operations
-- Transaction handling
+- Deep dive into Python API for programmatic access
+- Seamless pandas and NumPy integration
+- Transaction management and error handling
+- Building data processing pipelines
+- Lakehouse ETL patterns with Python
 
 ### Lab 5: Data Format Operations
-- Parquet file operations
-- CSV/JSON processing
-- Apache Arrow integration
-- Data format conversions
+- Parquet file operations for lakehouse storage
+- Apache Arrow integration for zero-copy operations
+- CSV/JSON processing and conversion
+- Data format optimization strategies
+- Lakehouse format best practices
 
 ### Lab 6: Performance & Optimization
-- Query optimization techniques
-- Index usage and performance
-- Memory management
-- Query execution analysis
+- Query execution plan analysis
+- Index strategies for lakehouse performance
+- Memory and thread configuration optimization
+- Caching strategies for analytical workloads
+- Lakehouse layer performance tuning
 
 ### Lab 7: Extensions & Advanced Features
-- HTTP filesystem extension
-- Spatial data processing
-- JSON extensions
-- Custom functions
+- HTTP filesystem for remote data lake access
+- Spatial data processing and analysis
+- Advanced JSON operations for semi-structured data
+- Custom functions and UDFs for business logic
+- Lakehouse extension patterns
 
-### Lab 8: Real-world Data Patterns
-- ETL patterns with DuckDB
-- Data cleaning and validation
-- Slowly Changing Dimensions
-- Batch processing patterns
+### Lab 8: Real-World Use Cases and Patterns
+- ETL pipeline implementation with error handling
+- Data quality frameworks and validation
+- Slowly Changing Dimensions (SCD) implementation
+- Batch processing workflows
+- Lakehouse production patterns
 
-### Lab 9: Integration & Production
-- Integration with external databases
-- Production deployment patterns
-- Monitoring and logging
-- Error handling and recovery
+### Lab 9: Integration and Production Readiness
+- External database and system integration
+- Production deployment strategies (Docker/Kubernetes)
+- Monitoring, alerting, and health checks
+- Backup, recovery, and disaster procedures
+- Security implementation and access control
 
 ## 💾 Sample Database
 
@@ -277,6 +293,8 @@ con.execute("SET threads=4")
 ### Core Documentation
 - [Setup Guide](docs/SETUP_GUIDE.md) - Detailed setup instructions for Python and Docker
 - [Architecture Overview](docs/ARCHITECTURE.md) - System architecture and component details
+- [Lakehouse Architecture](docs/LAKEHOUSE_ARCHITECTURE.md) - Lakehouse concepts and DuckDB integration
+- [Operations Guide](docs/OPERATIONS_GUIDE.md) - Production operations and readiness
 - [Lab Guide](docs/LAB_GUIDE.md) - Complete lab sequence and learning path
 - [Troubleshooting](docs/TROUBLESHOOTING.md) - Common issues and solutions
 - [GitHub Pages Setup](docs/GITHUB_PAGES_SETUP.md) - Documentation deployment guide
@@ -285,50 +303,31 @@ con.execute("SET threads=4")
 ### 🎓 Conceptual Guides (Tutorials)
 Deep-dive tutorials explaining the "Why" behind the "How":
 
-- [Conceptual Guide 1: DuckDB Architecture](docs/conceptual-guides/01-duckdb-architecture.md) - Understanding DuckDB's architecture and design
-- [Conceptual Guide 2: SQL Operations & Data Types](docs/conceptual-guides/02-sql-operations-data-types.md) - SQL operations and DuckDB data types
-- [Conceptual Guide 3: Python Integration](docs/conceptual-guides/03-python-integration.md) - Python API and pandas integration
-- [Conceptual Guide 4: Data Format Operations](docs/conceptual-guides/04-data-format-operations.md) - Parquet, Arrow, and format conversions
-- [Conceptual Guide 5: Performance & Optimization](docs/conceptual-guides/05-performance-optimization.md) - Query optimization and performance tuning
-- [Conceptual Guide 6: Extensions & Advanced Features](docs/conceptual-guides/06-extensions-advanced-features.md) - Extension ecosystem and advanced capabilities
-- [Conceptual Guide 7: Real-World Data Patterns](docs/conceptual-guides/07-real-world-patterns.md) - ETL patterns and data processing workflows
-- [Conceptual Guide 8: Integration & Production](docs/conceptual-guides/08-integration-production.md) - Production deployment and integration patterns
+- [Lakehouse Architecture](docs/LAKEHOUSE_ARCHITECTURE.md) - Understanding lakehouse patterns and DuckDB's role
+- [DuckDB Architecture](docs/ARCHITECTURE.md) - Understanding DuckDB's architecture and design
+- [Operations & Production Readiness](docs/OPERATIONS_GUIDE.md) - Production operations and best practices
 
 ### Lab Materials
 - [Lab 0: Sample Database Setup](labs/lab-00-sample-database.md) - Generate and load sample data
 - [Lab 1: Environment Setup](labs/lab-01-setup.md) - Component verification and first DuckDB query
 - [Lab 2: Basic Operations](labs/lab-02-basic-operations.md) - Tables, queries, data types
-- [Lab 3: Advanced Features](labs/lab-03-advanced-features.md) - Window functions, joins, aggregations
-- [Lab 4: Python Integration](labs/lab-04-python-integration.md) - Python API and pandas integration
-- [Lab 5: Data Format Operations](labs/lab-05-data-format-operations.md) - Parquet, Arrow, format conversions
-- [Lab 6: Performance & Optimization](labs/lab-06-performance-optimization.md) - Query optimization and performance analysis
-- [Lab 7: Extensions & Advanced Features](labs/lab-07-extensions-advanced-features.md) - Extensions and advanced capabilities
-- [Lab 8: Real-World Data Patterns](labs/lab-08-real-world-patterns.md) - ETL patterns and data processing
-- [Lab 9: Integration & Production](labs/lab-09-integration-production.md) - Production deployment and integration
+- [Lab 3: Advanced Features and Capabilities](labs/lab-03-advanced-features.md) - Window functions, lakehouse patterns
+- [Lab 4: DuckDB + Python Integration](labs/lab-04-python-integration.md) - Python API, pandas, ETL pipelines
+- [Lab 5: Data Format Operations](labs/lab-05-data-format-operations.md) - Parquet, Arrow, lakehouse formats
+- [Lab 6: Performance & Optimization](labs/lab-06-performance-optimization.md) - Query optimization, lakehouse performance
+- [Lab 7: Extensions & Advanced Features](labs/lab-07-extensions-advanced-features.md) - HTTP filesystem, spatial, extensions
+- [Lab 8: Real-World Use Cases and Patterns](labs/lab-08-real-world-patterns.md) - ETL, SCD, production patterns
+- [Lab 9: Integration and Production Readiness](labs/lab-09-integration-production.md) - Production deployment, monitoring, security
 
 ### 💡 Jupyter Notebooks
 Interactive Jupyter notebooks for hands-on learning:
 
-- [Lab Notebooks](notebooks/) - Student notebooks with exercises
+- [Lab Notebooks](notebooks/) - Student notebooks with exercises (coming soon)
 - [Solution Helper](notebooks/SOLUTION_HELPER_INSTRUCTIONS.md) - How to use the solution helper when stuck
 
-### 🔧 Solutions Framework
-Complete solution notebooks for reference and validation:
-
-- [Lab 1 Solution](solutions/lab-01-setup-solution.ipynb) - Environment setup solution
-- [Lab 2 Solution](solutions/lab-02-basic-operations-solution.ipynb) - Basic operations solution
-- [Lab 3 Solution](solutions/lab-03-advanced-features-solution.ipynb) - Advanced features solution
-- [Lab 4 Solution](solutions/lab-04-python-integration-solution.ipynb) - Python integration solution
-- [Lab 5 Solution](solutions/lab-05-data-format-operations-solution.ipynb) - Data format operations solution
-- [Lab 6 Solution](solutions/lab-06-performance-optimization-solution.ipynb) - Performance optimization solution
-- [Lab 7 Solution](solutions/lab-07-extensions-advanced-features-solution.ipynb) - Extensions solution
-- [Lab 8 Solution](solutions/lab-08-real-world-patterns-solution.ipynb) - Real-world patterns solution
-- [Lab 9 Solution](solutions/lab-09-integration-production-solution.ipynb) - Integration solution
-
 ### 🤖 Automation Scripts
-- [Solution Helper](scripts/solution_helper.py) - Python helper for accessing solutions and hints
-- [Validate Solutions](scripts/validate_solutions.sh) - CI/CD validation script for solution notebooks
-- [Convert Labs to Notebooks](scripts/convert_labs_to_notebooks.py) - Convert Markdown labs to Jupyter notebooks
+- [Solution Helper](scripts/solution_helper.py) - Python helper for accessing solutions and hints (coming soon)
+- [Setup Script](scripts/setup.py) - Environment validation and setup
 - [Generate Sample Data](scripts/generate_sample_data.py) - Generate realistic business data
 - [Load Sample Data](scripts/load_sample_data.py) - Load sample data into DuckDB
 
