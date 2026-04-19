@@ -397,6 +397,25 @@ Interactive Jupyter notebooks for hands-on learning:
 - [Generate Sample Data](scripts/generate_sample_data.py) - Generate realistic business data
 - [Load Sample Data](scripts/load_sample_data.py) - Load sample data into DuckDB
 
+## 🔗 Related Practice Repositories
+
+Continue your learning journey with these related repositories:
+
+### AI/ML Practice
+- [🤖 DSPy Code Practice](https://github.com/nellaivijay/dspy-code-practice) - Declarative LLM programming
+- [🧠 LLM Fine-Tuning Practice](https://github.com/nellaivijay/llm-fine-tuning-practice) - Model fine-tuning techniques
+
+### Data Engineering Practice
+- [⚡ Apache Spark Code Practice](https://github.com/nellaivijay/spark-code-practice) - Big data processing
+- [🏔️ Apache Iceberg Code Practice](https://github.com/nellaivijay/iceberg-code-practice) - Lakehouse architecture
+- [🔧 Apache Beam Code Practice](https://github.com/nellaivijay/beam-code-practice) - Data pipelines
+
+### Programming Practice
+- [⚙️ Scala Data Analysis Practice](https://github.com/nellaivijay/scala-dataanalysis-code-practice) - Functional programming
+
+### Resource Hub
+- [📚 Awesome My Notes](https://github.com/nellaivijay/awesome-my-notes) - Comprehensive technical notes and learning resources
+
 ## 🆘 Vendor Independence
 
 This environment uses only MIT-licensed tools:
