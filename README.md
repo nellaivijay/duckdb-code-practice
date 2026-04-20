@@ -1,3 +1,29 @@
+# DuckDB Code Practice
+
+[![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
+[![DuckDB](https://img.shields.io/badge/DuckDB-0.9%2B-yellow)](https://duckdb.org/)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
+[![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-orange)](https://jupyter.org/)
+
+## 📖 Table of Contents
+
+- [🎯 Educational Mission](#-educational-mission)
+- [🎓 Why This Repository?](#-why-this-repository)
+- [🎓 Learning Approach](#-learning-approach)
+- [🏗️ Architecture](#-architecture)
+- [🛠️ Core Stack](#️-core-stack)
+- [🎓 Lab Structure](#-lab-structure)
+- [💾 Sample Database](#-sample-database)
+- [🚀 Quick Start](#-quick-start)
+- [📋 Requirements](#-requirements)
+- [🔧 Configuration](#-configuration)
+- [📚 Documentation](#-documentation)
+- [🔗 Related Practice Repositories](#-related-practice-repositories)
+- [🆘 Vendor Independence](#-vendor-independence)
+- [🤝 Contributing](#-contributing)
+- [👥 Community and Learning](#-community-and-learning)
+- [📄 License](#-license)
+
 <!--
 SEO Metadata
 Title: DuckDB Code Practice - Free Hands-on Labs for Lakehouse Analytics
@@ -5,8 +31,6 @@ Description: Master DuckDB and lakehouse architecture with free, vendor-independ
 Keywords: duckdb, lakehouse, data lakehouse, sql analytics, data analytics, parquet, arrow, python, pandas, data engineering, olap, columnar database, open source data, ETL, data quality, production readiness
 Author: DuckDB Code Practice Community
 -->
-
-# DuckDB Code Practice
 
 ## 🎯 Educational Mission
 
